@@ -6,7 +6,7 @@ const IndexPage = () => {
     const ipad = {price: 'price_1Hax3bLnbAKYBubgN7751o69', quantity: 1}
     return (
     <div>
-        <Product label ={"Buy Book And Ipad"} lineItems = {[Bookitem, ipad]} />
+        <Product label ={"Buy Book And Ipad at $120"} lineItems = {[Bookitem, ipad]} />
         <Product label ={"Buy Book"} lineItems = {[Bookitem]}/>
       </div>
     )
