@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 class Product extends Component {
   componentDidMount() {
-    const stripe_key = process.env.STRIPE_PUB_KEY;
-    this.stripe = window.Stripe(stripe_key)
+    this.stripe = window.Stripe(process.env.STRIPE_PUB_KEY)
   }
   render() {
       return (
       <form
         onSubmit={event => {
+          console.log(process.env.STRIPE_PUB_KEY);
+
           event.preventDefault()
           this.stripe
             .redirectToCheckout({
