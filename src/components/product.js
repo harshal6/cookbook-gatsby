@@ -5,7 +5,6 @@ class Product extends Component {
     this.stripe = window.Stripe(stripe_key)
   }
   render() {
-      console.log(stripe_key);
       return (
       <form
         onSubmit={event => {
