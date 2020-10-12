@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 class Product extends Component {
   componentDidMount() {
-    this.stripe = window.Stripe(process.env.STRIPE_PUB_KEY)
+    const stripe_key = process.env.STRIPE_PUB_KEY;
+    this.stripe = window.Stripe(stripe_key)
   }
   render() {
-      console.log(process.env.STRIPE_PUB_KEY);
+      console.log(stripe_key);
       return (
       <form
         onSubmit={event => {
